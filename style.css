@@ -1,0 +1,235 @@
+:root{
+    /* color */
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --blue-color: #0015FF;
+    --red-color: #FF0000;
+    --grey-dark-color: #565657;
+    --grey-light-color: #A09FA1;
+    
+    /* size */
+    --side-padding: 12px;
+    --avatar-size: 36px;
+
+    /* font size (폰트 사이즈 미리 설정)*/
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px; 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer; /* 버튼에 커서를 올려놓았을 때 */
+    outline: none;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between; /* 양옆에 공간 만들기 */
+    padding: var(--padding);
+    background-color: var(--black-color); /* 배경색 검정색 변경 */
+    color: var(--white-color);
+
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color); /* 유튜브 아이콘을 빨간색으로 변경 */
+}
+
+header .icons .fa-search {
+    margin-right: var(--padding);
+}
+
+/* video player (비디오를 반응형으로 만들기)*/
+.player {
+    position: sticky; /* 스크롤해도 영상을 위로 고정 */
+    top: 0;
+    text-align: center; /* 영상을 화면 가운데로 고정 */
+    background-color: var(--black-color); /* 영상 뒷편의 색상을 검정색으로 변경 */
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+body > .info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex; /* 플렉스 박스라고 정의 */
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding); /* 해시태그 사이 간격주기 */
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton {
+    font-size: var(--font-medium);
+    /* 제목의 최대를 2줄로 제한하기 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions {
+    display: flex; /* 액션들을 플렉스박스로 정의 */
+    justify-content: space-around; /* 액션들을 같은 중심축으로 간격 넣기 */
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column; /* 위아래로 정렬 */
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions button i {
+    margin: auto; /* 아이콘과 문자를 중앙으로 배치 */
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+/* 채널정보 */
+.info .channal {
+    display: flex;
+    justify-content: space-between; /* 채널 정보와 구독 버튼을 분리 */
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info .channal .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.info .channal .metadata .info {
+    display: flex;
+    flex-direction: column; /* 닉네임과 구독자 수를 위아래로 배치 */
+}
+.info .channal .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%; /* 이미지 테두리를 동그랗게 */
+}
+
+.info .channal .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.info .channal .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .channal .subscribe { /* 구독버튼 설정 */
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/* up next */
+.upNext {
+    padding: 0 var(--padding);
+}
+
+.upNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upNext .item img {
+    flex: 1 1 35%;
+    margin-right: var();
+}
+
+.upNext .item .img img {
+    width: 100%; /* 부모 요소의 너비에 따라 이미지의 너비를 조정합니다. */
+    height: auto; /* 가로 세로 비율을 유지하여 이미지의 높이를 자동으로 조정합니다. */
+    display: block; /* 인라인 요소에서 블록 요소로 변경하여 다른 속성들이 영향을 받을 수 있도록 합니다. */
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upNext .item .info .title {
+    font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    font-size: var(--font-micro);
+    color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) { /* 화면이 크면 가로로 배치되게 설정 */
+    .infoAndUpNext {
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+}

@@ -4,8 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
+<link rel="stylesheet" href="style.css">
     <title>YOUTUBE MOBILE</title>
-    
+    <script src="https://kit.fontawesome.com/25ea5cc879.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
@@ -25,40 +26,91 @@
         <video controls src="video/150875-799327606_small.mp4"></video>
     </section>
 
-    <!-- Video Info -->
-    <section class="info">
-        <div class="metadata">
-            <ul class="hashtags">
-                <li>#sangjin</li>
-                <li>#coding</li>
-                <li>#study</li>
+    <div class="infoAndUpNext">
+        <!-- Video Info -->
+        <section class="info">
+            <!-- MetaData -->
+            <div class="metadata">
+                    <span>#sangjin</span> 
+                    <span>#coding</span>
+                    <span>#study</span>
+                <div class="titleAndButton">
+                    <span class="title">
+                        Clone Coding : 상진이의 첫 개인 프로젝트 만들기
+                    </span>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </div>
+                <div class="views">
+                    <span class="views">10 views 1 month ago</span>
+                </div>
+            </div>
+            <div class="actions">
+                <li>
+                    <button><i class="active fas fa-thumbs-up"></i><span>1K</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-thumbs-down"></i><span>0</span></button>
+                </li>
+                <li>
+                    <button><i class="fas fa-share"></i><span></span>Share</button>
+                </li>
+                <li>
+                    <button><i class="fas fa-plus"></i><span></span>Save</button>
+                </li>
+                <li>
+                    <button><i class="fab fa-font-awesome-flag"></i><span>Report</span></button>
+                </li>
+            </div>
+            <div class="channal">
+                <div class="metadata">
+                    <img src="image/avatar.png" alt="" />
+                    <div class="info">
+                        <span class="name">zinius</span>
+                        <span class="subscribers">100 subscribers</span>
+                    </div>
+                </div>
+                <button class="subscribe">subscribe</button>
+            </div>
+        </section>
+    
+        <!-- up next -->
+        <section class="upNext">
+            <span class="title">up next</span>
+            <ul>
+                <li class="item">
+                    <div class="img"><img src="image/1.png" alt=""></div>
+                    <div class="info">
+                        <span class="title">
+                            상진의 개인 프로젝트 시작하기
+                        </span>
+                        <span class="name">상진</span>
+                        <span class="views">10 views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                 <li class="item">
+                    <div class="img"><img src="image/2.jpg" alt=""></div>
+                    <div class="info">
+                        <span class="title">                            
+                            상진의 개인 프로젝트 하는 중
+                        </span>
+                        <span class="name">상진</span>
+                        <span class="views">10 views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+                 <li class="item">
+                    <div class="img"><img src="image/3.jpg" alt=""></div>
+                    <div class="info">
+                       <span class="title">
+                            상진의 개인 프로젝트 마감하기
+                        </span>
+                        <span class="name">상진</span>
+                        <span class="views">10 views</span>
+                    </div>
+                    <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
             </ul>
-            <div class="titleAndButton">
-                <span class="title">
-                    Clone Coding : 상진이의 첫 개인 프로젝트 만들기
-                </span>
-                <button class="moreBtn">
-                    <i class="fas fa-caret-down"></i>
-                </button>
-            </div>
-            <div class="views">
-                <span class="views">10 views 1 month ago</span>
-            </div>
-        </div>
-        <div class="actions">
-            <li>
-                <button><i class="fas fa-thumbs-up"></i></button></li>
-            <li>
-                <button><i class="fas fa-thumbs-down"></i></button></li>
-            <li>
-                <button><i class="fas fa-share"></i></button></li>
-            <li>
-                <button><i class="fas fa-plus"></i></button></li>
-            <li>
-                <button><i class="fab fa-font-awesome-flag"></i></button></li>
-        </div>
-        <div class="channal"></div>
-    </section>
-    <section class="UpNext"></section>
+        </section>
+    </div>
 </body>
 </html>
